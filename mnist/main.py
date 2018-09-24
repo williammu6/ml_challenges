@@ -37,7 +37,7 @@ def get_model():
     model.add(Dense(10, activation='softmax'))
     
 
-    opt = tf.keras.optimizers.SGD(lr=1e-3)
+    opt = tf.keras.optimizers.Adam(lr=1e-3)
 
     model.compile(loss='sparse_categorical_crossentropy',
               optimizer=opt,
